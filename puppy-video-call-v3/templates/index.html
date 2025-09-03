@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Puppy Video Call 🐶</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body class="light-mode">
+  <div class="navbar">
+    <span>🐾 Welcome, {{ username }}!</span>
+    <a href="{{ url_for('logout') }}">Logout</a>
+  </div>
+
+  <div class="video-container">
+    <video id="localVideo" autoplay muted></video>
+    <video id="remoteVideo" autoplay></video>
+  </div>
+
+  <div class="controls">
+    <button id="nextBtn">⏭️ Next</button>
+    <button id="friendBtn">🤝 Friend Request</button>
+    <button id="muteBtn">🔇 Mute/Unmute</button>
+    <button id="darkToggle">🌙 Dark/Light</button>
+  </div>
+
+  <div class="quotes">
+    <p id="quoteText">💖 Love makes life beautiful 💖</p>
+  </div>
+
+  <div class="corner-puppy">
+    <img src="{{ url_for('static', filename='assets/fart-9722_512.gif') }}" alt="Corner Puppy">
+  </div>
+
+  <audio id="bgMusic" src="{{ url_for('static', filename='assets/bg-music.mp3') }}" autoplay loop></audio>
+</body>
+</html>
+

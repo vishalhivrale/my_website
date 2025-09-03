@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Puppy Sign Up 🐶</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body class="light-mode">
+  <div class="login-container">
+    <h1>🐾 Join Puppy World</h1>
+
+    <form id="signupForm" method="POST">
+      <input type="text" name="username" placeholder="Choose Username 🐶" required>
+      <input type="password" name="password" placeholder="Password 🔑" required>
+      <input type="password" name="confirm" placeholder="Confirm Password 🔑" required>
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+
+    <div class="puppy-animation">
+      <img id="signupPuppy" src="{{ url_for('static', filename='assets/Barking Nicki Minaj GIF by DNCE.gif') }}" alt="Shih Tzu">
+    </div>
+  </div>
+</body>
+</html>
+

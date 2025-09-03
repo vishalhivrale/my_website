@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Puppy Login 🐶</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body class="light-mode">
+  <div class="login-container">
+    <h1>🐾 Puppy Video Call</h1>
+
+    <form id="loginForm" method="POST">
+      <input type="text" name="username" placeholder="Username 🐶" required>
+      <input type="password" name="password" placeholder="Password 🔑" required>
+      <label>
+        <input type="checkbox" name="remember"> Remember Me 🐾
+      </label>
+      <button type="submit">Login</button>
+    </form>
+
+    <p>Don’t have an account? <a href="{{ url_for('signup') }}">Sign up here</a></p>
+
+    <div class="puppy-animation">
+      <img id="loginPuppy" src="{{ url_for('static', filename='assets/Barking Nicki Minaj GIF by DNCE.gif') }}" alt="Shih Tzu">
+      <audio id="barkSound" src="{{ url_for('static', filename='assets/barking-large-and-small-dog-290711.mp3') }}"></audio>
+    </div>
+  </div>
+</body>
+</html>
+
